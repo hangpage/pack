@@ -3,10 +3,12 @@ Webpack 是当下最热门的前端资源模块化管理和打包工具。它可
 #### 安装
 先装好node和npm，因为webpack是一个基于node的项目
 `npm install -g webpack` 
+
 #### 建立项目
 - `mkdir webpack`
 - `cd webpack`
 - `npm init`
+
 #### webpack做了什么？
 - 从 context 对应的文件夹开始
 - 寻找 entry 里所有的文件名并读取内容。每个通过 import（ES6） 或 require()（Node） 引入的依赖关系，会被解析代码，并且被打包到最终的构建结果当中。然后它搜索这些依赖，以及这些依赖的依赖，直到“依赖树”的最末端节点 — 只打包它所需要的依赖，没有其他的东西。
