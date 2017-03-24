@@ -25,7 +25,18 @@ export default class Plist extends React.Component {
 
   render() {
     const imgStyle = {
-      width: '100px'
+      width: '100%'
+    }
+    const rowStyle = {
+      display: 'flex',
+      flexWrap: 'wrap'
+    }
+    const nameStyle = {
+      color: 'red'
+    }
+    const cardStyle = {
+      width: '10%',
+      padding: '10px'
     }
     if (this.state.firstView) {
       return (
@@ -43,15 +54,15 @@ export default class Plist extends React.Component {
         )
       } else {
         return (
-          <div className="row">
+          <div className="row" style={rowStyle}>
             {this.state.list.map(people=>{
               return (
-                <div className="card">
+                <a className="card" style={cardStyle} href={people.html_url}>
                   <img src={people.avatar_url} style={imgStyle}/>
-                  <p className="card-text">
+                  <span className="card-text" style={nameStyle}>
                     {people.login}
-                  </p>
-                </div>
+                  </span>
+                </a>
               )
             })}
          </div>
