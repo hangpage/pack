@@ -16,7 +16,7 @@ Webpack 是当下最热门的前端资源模块化管理和打包工具。它可
 - 支持通过import来直接引入css、less、sass甚至是图片
 - 支持css中引用的图片大小在某一大小范围之内直接转为BASE64格式
 
-####指令
+#### 指令
  - `npm install html-webpack-plugin --save-dev`
  - `npm install css-loader style-loader --save-dev`
  - `npm install webpack-dev-server --save-dev`(自动刷新服务就是基于这个的)
